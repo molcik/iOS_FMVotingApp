@@ -188,6 +188,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="smileHappy" destination="DUg-as-cgF" id="qrf-Fx-a1J"/>
+                        <outlet property="smileNeutral" destination="xud-q0-T8z" id="FV2-iA-esr"/>
+                        <outlet property="smileNoComment" destination="71m-fD-eS1" id="W80-db-5di"/>
+                        <outlet property="smileSad" destination="t5B-Ed-vgq" id="Ezy-78-ktW"/>
                         <outlet property="spinner" destination="W2A-O4-iFy" id="g7w-bE-gtc"/>
                     </connections>
                 </viewController>

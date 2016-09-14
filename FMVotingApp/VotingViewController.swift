@@ -15,6 +15,11 @@ class VotingViewController: UIViewController {
     
     // MARK: Attributes
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var smileHappy: UIButton!
+    @IBOutlet weak var smileNeutral: UIButton!
+    @IBOutlet weak var smileNoComment: UIButton!
+    @IBOutlet weak var smileSad: UIButton!
+    
     var user: FIRUser?
     enum votes: Int {
         case happy
@@ -42,7 +47,7 @@ class VotingViewController: UIViewController {
     }
     
     // MARK: Networking
-    // record new vote, if succesful call update Statistic
+    // Record new vote, if succesful call update Statistic
     func vote(vote: votes ) {
         if let user = user {
             self.spinner.startAnimating()
@@ -73,8 +78,9 @@ class VotingViewController: UIViewController {
         }
     }
     
-    // download actual votes count and increment it
+    // Download actual votes count and increment it
     func updateStatistic() {
+        // Transaction in reference path "/statistics"
         stats.runTransactionBlock({ (currentData: FIRMutableData) -> FIRTransactionResult in
             if var stats = currentData.value as? [String: AnyObject] {
                 var votes = stats["votes"] as? Int ?? 0
@@ -96,6 +102,14 @@ class VotingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        /*
+        UIView.animateWithDuration(0.5, delay: 0.4, usingSpringWithDamping: 5.5, initialSpringVelocity: 3.3, options: .Repeat, animations: {
+            self.smileHappy.center.x += self.view.bounds.width
+            }, completion: nil)
+         */
     }
     
     override func didReceiveMemoryWarning() {

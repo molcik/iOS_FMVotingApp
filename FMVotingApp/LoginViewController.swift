@@ -49,6 +49,7 @@ class LoginViewController: UIViewController {
                         self.spinner.stopAnimating()
                         self.loginButtonOutlet.userInteractionEnabled = true
                         let votingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Voting") as! VotingViewController
+                        // Pass user instance
                         votingViewController.user = user
                         self.presentViewController(votingViewController, animated: true, completion: nil)
                     })
