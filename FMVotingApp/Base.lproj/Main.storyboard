@@ -92,7 +92,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button" image="simile-happy"/>
                                                 <connections>
-                                                    <action selector="smileHappyAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="Lvz-Fm-Y5i"/>
+                                                    <action selector="smileHappyAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="SIB-6W-doC"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -113,7 +113,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button" image="simile-neutral"/>
                                                 <connections>
-                                                    <action selector="smileSadAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="qa8-43-axN"/>
+                                                    <action selector="smileNeutralAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="2I5-vN-H7H"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -134,7 +134,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button" image="simile-nocomment"/>
                                                 <connections>
-                                                    <action selector="smileNeutralAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="5Hd-TP-OcO"/>
+                                                    <action selector="smileNoCommentAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="p35-rG-3to"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -155,7 +155,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button" image="similes-sad"/>
                                                 <connections>
-                                                    <action selector="smileHappyAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="RgU-Q2-cM9"/>
+                                                    <action selector="smileSadAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="lnv-dT-qlR"/>
                                                 </connections>
                                             </button>
                                         </subviews>

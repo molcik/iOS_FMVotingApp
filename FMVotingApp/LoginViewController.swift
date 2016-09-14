@@ -22,8 +22,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonAction(sender: AnyObject) {
         
-        var username = mobileIDField.text
-        var password = passwordField.text
+        let username = mobileIDField.text
+        let password = passwordField.text
         
         // Validate the text fields
         if username!.isEmpty || password!.isEmpty {

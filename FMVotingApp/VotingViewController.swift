@@ -16,27 +16,33 @@ class VotingViewController: UIViewController {
     // MARK: Attributes
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     var user: FIRUser?
-    enum votes: String {
+    enum votes: Int {
         case happy
-        case sad
         case neutral
-        case angry
+        case noComment
+        case sad
     }
     let ref = FIRDatabase.database().reference()
+    let stats = FIRDatabase.database().referenceWithPath("/statistics")
     
     // MARK: Actions
     var userID:String?
+
     @IBAction func smileHappyAction(sender: AnyObject) {
         vote(votes.happy)
-    }
-    @IBAction func smileSadAction(sender: AnyObject) {
-        vote(votes.sad)
     }
     @IBAction func smileNeutralAction(sender: AnyObject) {
         vote(votes.neutral)
     }
+    @IBAction func smileNoCommentAction(sender: AnyObject) {
+        vote(votes.noComment)
+    }
+    @IBAction func smileSadAction(sender: AnyObject) {
+        vote(votes.sad)
+    }
     
-    // 
+    // MARK: Networking
+    // record new vote, if succesful call update Statistic
     func vote(vote: votes ) {
         if let user = user {
             self.spinner.startAnimating()
@@ -57,16 +63,34 @@ class VotingViewController: UIViewController {
                     self.spinner.stopAnimating()
                 } else {
                     // show thanks note
+                    self.updateStatistic()
                     let alert = UIAlertController.init(title: "Thank You", message: "Your vote has been recorded.", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
                     self.spinner.stopAnimating()
                 }
             })
-        } else {
-            
         }
     }
+    
+    // download actual votes count and increment it
+    func updateStatistic() {
+        stats.runTransactionBlock({ (currentData: FIRMutableData) -> FIRTransactionResult in
+            if var stats = currentData.value as? [String: AnyObject] {
+                var votes = stats["votes"] as? Int ?? 0
+                votes += 1
+                stats["votes"] = votes
+                currentData.value = stats
+                return FIRTransactionResult.successWithValue(currentData)
+            }
+            return FIRTransactionResult.successWithValue(currentData)
+        }) { (error, committed, snapshot) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+
 
     // MARK: View life cycle
     override func viewDidLoad() {
