@@ -36,7 +36,7 @@ class VotingViewController: UIViewController {
         vote(votes.neutral)
     }
     
-    //
+    // 
     func vote(vote: votes ) {
         if let user = user {
             self.spinner.startAnimating()

@@ -17,18 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobileID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GJp-59-7mI">
-                                <rect key="frame" x="252" y="233" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobileID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GJp-59-7mI">
+                                <rect key="frame" x="203" y="233" width="194" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="OHI-00-HL8"/>
+                                    <constraint firstAttribute="width" constant="194" id="OHI-00-HL8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-WA-aD8">
-                                <rect key="frame" x="252" y="285" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-WA-aD8">
+                                <rect key="frame" x="203" y="285" width="194" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="AA2-LU-2sV"/>
+                                    <constraint firstAttribute="width" constant="194" id="AA2-LU-2sV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -78,34 +78,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xud-q0-T8z">
-                                <rect key="frame" x="258" y="257" width="85" height="85"/>
-                                <state key="normal" title="Button" image="simile-happy"/>
-                                <connections>
-                                    <action selector="smileSadAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="qa8-43-axN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71m-fD-eS1">
-                                <rect key="frame" x="397" y="257" width="85" height="85"/>
-                                <state key="normal" title="Button" image="simile-happy"/>
-                                <connections>
-                                    <action selector="smileNeutralAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="5Hd-TP-OcO"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-wT-yEa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSq-rs-z1R">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="600"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUg-as-cgF">
+                                                <rect key="frame" x="33" y="258" width="85" height="85"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="85" id="e7T-Kg-QXr"/>
+                                                    <constraint firstAttribute="width" constant="85" id="rCu-4x-JrM"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="simile-happy"/>
+                                                <connections>
+                                                    <action selector="smileHappyAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="Lvz-Fm-Y5i"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="DUg-as-cgF" firstAttribute="centerY" secondItem="iSq-rs-z1R" secondAttribute="centerY" id="gJ3-AZ-xZ9"/>
+                                            <constraint firstItem="DUg-as-cgF" firstAttribute="centerX" secondItem="iSq-rs-z1R" secondAttribute="centerX" id="z8v-oc-WNr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14c-M0-pkb">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="600"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xud-q0-T8z">
+                                                <rect key="frame" x="33" y="258" width="85" height="85"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="85" id="OIL-hQ-k9a"/>
+                                                    <constraint firstAttribute="width" constant="85" id="plB-tt-zHz"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="simile-neutral"/>
+                                                <connections>
+                                                    <action selector="smileSadAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="qa8-43-axN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="xud-q0-T8z" firstAttribute="centerY" secondItem="14c-M0-pkb" secondAttribute="centerY" id="wSH-hv-JEP"/>
+                                            <constraint firstItem="xud-q0-T8z" firstAttribute="centerX" secondItem="14c-M0-pkb" secondAttribute="centerX" id="yay-aV-bpN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpO-Cp-v03">
+                                        <rect key="frame" x="300" y="0.0" width="150" height="600"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71m-fD-eS1">
+                                                <rect key="frame" x="33" y="258" width="85" height="85"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="DPK-ti-wUd"/>
+                                                    <constraint firstAttribute="height" constant="85" id="nS2-Wy-XEe"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="simile-nocomment"/>
+                                                <connections>
+                                                    <action selector="smileNeutralAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="5Hd-TP-OcO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="71m-fD-eS1" firstAttribute="centerY" secondItem="HpO-Cp-v03" secondAttribute="centerY" id="6ru-vd-akg"/>
+                                            <constraint firstItem="71m-fD-eS1" firstAttribute="centerX" secondItem="HpO-Cp-v03" secondAttribute="centerX" id="sGG-OJ-FJr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IES-zM-YOo">
+                                        <rect key="frame" x="450" y="0.0" width="150" height="600"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5B-Ed-vgq">
+                                                <rect key="frame" x="33" y="258" width="85" height="85"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="85" id="5pG-7b-LVB"/>
+                                                    <constraint firstAttribute="width" constant="85" id="GDl-gn-P04"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="similes-sad"/>
+                                                <connections>
+                                                    <action selector="smileHappyAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="RgU-Q2-cM9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="t5B-Ed-vgq" firstAttribute="centerX" secondItem="IES-zM-YOo" secondAttribute="centerX" id="FUt-HK-Qa9"/>
+                                            <constraint firstItem="t5B-Ed-vgq" firstAttribute="centerY" secondItem="IES-zM-YOo" secondAttribute="centerY" id="oSV-kC-OJ7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="W2A-O4-iFy">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUg-as-cgF">
-                                <rect key="frame" x="91" y="257" width="138" height="85"/>
-                                <state key="normal" title="Button" image="simile-happy"/>
-                                <connections>
-                                    <action selector="smileHappyAction:" destination="8d1-Ox-phR" eventType="touchUpInside" id="Lvz-Fm-Y5i"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="HpO-Cp-v03" firstAttribute="height" secondItem="Fs8-pC-g2d" secondAttribute="height" id="1WN-Sj-hfB"/>
+                            <constraint firstItem="iSq-rs-z1R" firstAttribute="height" secondItem="Fs8-pC-g2d" secondAttribute="height" id="8aY-Eb-yi2"/>
+                            <constraint firstItem="ldh-tm-Nyb" firstAttribute="top" secondItem="vmo-wT-yEa" secondAttribute="bottom" id="GL5-Zs-OuB"/>
                             <constraint firstItem="W2A-O4-iFy" firstAttribute="centerY" secondItem="Fs8-pC-g2d" secondAttribute="centerY" id="Kz6-fU-sPK"/>
+                            <constraint firstItem="vmo-wT-yEa" firstAttribute="height" secondItem="Fs8-pC-g2d" secondAttribute="height" id="VTx-rL-C8E"/>
+                            <constraint firstItem="vmo-wT-yEa" firstAttribute="leading" secondItem="Fs8-pC-g2d" secondAttribute="leading" id="Xzo-QA-GbJ"/>
+                            <constraint firstItem="vmo-wT-yEa" firstAttribute="width" secondItem="Fs8-pC-g2d" secondAttribute="width" id="dQv-f9-gnx"/>
+                            <constraint firstItem="IES-zM-YOo" firstAttribute="height" secondItem="Fs8-pC-g2d" secondAttribute="height" id="eRC-h7-z9s"/>
+                            <constraint firstItem="14c-M0-pkb" firstAttribute="height" secondItem="Fs8-pC-g2d" secondAttribute="height" id="jCQ-XD-8QN"/>
+                            <constraint firstAttribute="trailing" secondItem="vmo-wT-yEa" secondAttribute="trailing" id="kia-sE-0ab"/>
+                            <constraint firstItem="vmo-wT-yEa" firstAttribute="top" secondItem="Fs8-pC-g2d" secondAttribute="top" id="mo8-Bc-oIm"/>
                             <constraint firstItem="W2A-O4-iFy" firstAttribute="centerX" secondItem="Fs8-pC-g2d" secondAttribute="centerX" id="vkM-2A-WjF"/>
                         </constraints>
                     </view>
@@ -120,5 +198,8 @@
     </scenes>
     <resources>
         <image name="simile-happy" width="84" height="85"/>
+        <image name="simile-neutral" width="84" height="85"/>
+        <image name="simile-nocomment" width="84" height="85"/>
+        <image name="similes-sad" width="84" height="85"/>
     </resources>
 </document>
