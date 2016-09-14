@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3408CD7A1D893BB1000772E6 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408CD791D893BB1000772E6 /* VotingViewController.swift */; };
 		3466F7381D8935D600595E40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3466F7371D8935D600595E40 /* GoogleService-Info.plist */; };
 		34A90F4E1D893115005EB687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A90F4D1D893115005EB687 /* AppDelegate.swift */; };
-		34A90F501D893115005EB687 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A90F4F1D893115005EB687 /* ViewController.swift */; };
+		34A90F501D893115005EB687 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A90F4F1D893115005EB687 /* LoginViewController.swift */; };
 		34A90F531D893115005EB687 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A90F511D893115005EB687 /* Main.storyboard */; };
 		34A90F551D893115005EB687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A90F541D893115005EB687 /* Assets.xcassets */; };
 		34A90F581D893115005EB687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A90F561D893115005EB687 /* LaunchScreen.storyboard */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3408CD791D893BB1000772E6 /* VotingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
 		3466F7371D8935D600595E40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		34A90F4A1D893115005EB687 /* FMVotingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMVotingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A90F4D1D893115005EB687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34A90F4F1D893115005EB687 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34A90F4F1D893115005EB687 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		34A90F521D893115005EB687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34A90F541D893115005EB687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34A90F571D893115005EB687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				34A90F4D1D893115005EB687 /* AppDelegate.swift */,
-				34A90F4F1D893115005EB687 /* ViewController.swift */,
+				34A90F4F1D893115005EB687 /* LoginViewController.swift */,
+				3408CD791D893BB1000772E6 /* VotingViewController.swift */,
 				34A90F511D893115005EB687 /* Main.storyboard */,
 				34A90F541D893115005EB687 /* Assets.xcassets */,
 				34A90F561D893115005EB687 /* LaunchScreen.storyboard */,
@@ -214,8 +217,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34A90F501D893115005EB687 /* ViewController.swift in Sources */,
+				34A90F501D893115005EB687 /* LoginViewController.swift in Sources */,
 				34A90F4E1D893115005EB687 /* AppDelegate.swift in Sources */,
+				3408CD7A1D893BB1000772E6 /* VotingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

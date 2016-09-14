@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FMVotingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="FMVotingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,34 +17,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GJp-59-7mI">
-                                <rect key="frame" x="252" y="218" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobileID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GJp-59-7mI">
+                                <rect key="frame" x="252" y="233" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="OHI-00-HL8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-WA-aD8">
-                                <rect key="frame" x="252" y="270" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-WA-aD8">
+                                <rect key="frame" x="252" y="285" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="AA2-LU-2sV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mg-zT-Mfr">
-                                <rect key="frame" x="277" y="331" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RPT-gS-1Gm">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mg-zT-Mfr">
+                                <rect key="frame" x="281" y="337" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="8d1-Ox-phR" kind="show" id="E0q-dO-G6y"/>
+                                    <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7KT-3E-6Zb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Mg-zT-Mfr" firstAttribute="top" secondItem="AOf-WA-aD8" secondAttribute="bottom" constant="22" id="0pT-Yz-juT"/>
+                            <constraint firstItem="AOf-WA-aD8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7ll-Qo-lsD"/>
+                            <constraint firstItem="AOf-WA-aD8" firstAttribute="top" secondItem="GJp-59-7mI" secondAttribute="bottom" constant="22" id="DmX-G6-Lfm"/>
+                            <constraint firstItem="5Mg-zT-Mfr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GDg-GW-M6j"/>
+                            <constraint firstItem="AOf-WA-aD8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NcL-lM-RKI"/>
+                            <constraint firstItem="GJp-59-7mI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VCq-rj-bC4"/>
+                            <constraint firstItem="RPT-gS-1Gm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mDJ-YK-f6Y"/>
+                            <constraint firstItem="RPT-gS-1Gm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tp2-56-Y6Z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButtonOutlet" destination="5Mg-zT-Mfr" id="tmi-jP-tNz"/>
+                        <outlet property="mobileIDField" destination="GJp-59-7mI" id="sCF-ba-qPe"/>
+                        <outlet property="passwordField" destination="AOf-WA-aD8" id="00A-4R-bYs"/>
+                        <outlet property="spinner" destination="RPT-gS-1Gm" id="06g-QL-w5Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Voting View Controller-->
         <scene sceneID="cPD-Vk-Tox">
             <objects>
-                <viewController id="8d1-Ox-phR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Voting" id="8d1-Ox-phR" customClass="VotingViewController" customModule="FMVotingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M2O-u2-l2J"/>
                         <viewControllerLayoutGuide type="bottom" id="ldh-tm-Nyb"/>
@@ -60,11 +85,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ga4-39-Sud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063" y="387"/>
+            <point key="canvasLocation" x="1041" y="320"/>
         </scene>
     </scenes>
 </document>
