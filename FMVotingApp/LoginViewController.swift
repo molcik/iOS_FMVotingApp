@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
-    // MARK: Atributes
+    //varRK: Atributes
     
     @IBOutlet weak var mobileIDField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -27,8 +27,6 @@ class LoginViewController: UIViewController {
         
         // Validate the text fields
         if username!.isEmpty || password!.isEmpty {
-            //let alert = UIAlertView(title: "Alert", message: "All fields are mandatory", delegate: self, cancelButtonTitle: "OK")
-            //alert.show()
             let alert = UIAlertController.init(title: "Alert", message: "All fields are mandatory, please fill them.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -50,8 +48,9 @@ class LoginViewController: UIViewController {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         self.spinner.stopAnimating()
                         self.loginButtonOutlet.userInteractionEnabled = true
-                        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Voting")
-                        self.presentViewController(viewController, animated: true, completion: nil)
+                        let votingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Voting") as! VotingViewController
+                        votingViewController.user = user
+                        self.presentViewController(votingViewController, animated: true, completion: nil)
                     })
                 }
             }
