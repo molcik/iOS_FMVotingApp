@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3466F7381D8935D600595E40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3466F7371D8935D600595E40 /* GoogleService-Info.plist */; };
 		34A90F4E1D893115005EB687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A90F4D1D893115005EB687 /* AppDelegate.swift */; };
 		34A90F501D893115005EB687 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A90F4F1D893115005EB687 /* ViewController.swift */; };
 		34A90F531D893115005EB687 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A90F511D893115005EB687 /* Main.storyboard */; };
 		34A90F551D893115005EB687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A90F541D893115005EB687 /* Assets.xcassets */; };
 		34A90F581D893115005EB687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A90F561D893115005EB687 /* LaunchScreen.storyboard */; };
+		9C0ACDFA2ADC684617C419BD /* Pods_FMVotingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD17A90872418DC772D72483 /* Pods_FMVotingApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3466F7371D8935D600595E40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		34A90F4A1D893115005EB687 /* FMVotingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMVotingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A90F4D1D893115005EB687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34A90F4F1D893115005EB687 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		34A90F541D893115005EB687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34A90F571D893115005EB687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34A90F591D893116005EB687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43C802D716652676E95A6EDF /* Pods-FMVotingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMVotingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FMVotingApp/Pods-FMVotingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		97E163A87DC34C75E29435B9 /* Pods-FMVotingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMVotingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FMVotingApp/Pods-FMVotingApp.release.xcconfig"; sourceTree = "<group>"; };
+		FD17A90872418DC772D72483 /* Pods_FMVotingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FMVotingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0ACDFA2ADC684617C419BD /* Pods_FMVotingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				34A90F4C1D893115005EB687 /* FMVotingApp */,
 				34A90F4B1D893115005EB687 /* Products */,
+				C9385F7B517C87B2843E216D /* Pods */,
+				E41EBECFB41DD13325DBD609 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,9 +68,27 @@
 				34A90F511D893115005EB687 /* Main.storyboard */,
 				34A90F541D893115005EB687 /* Assets.xcassets */,
 				34A90F561D893115005EB687 /* LaunchScreen.storyboard */,
+				3466F7371D8935D600595E40 /* GoogleService-Info.plist */,
 				34A90F591D893116005EB687 /* Info.plist */,
 			);
 			path = FMVotingApp;
+			sourceTree = "<group>";
+		};
+		C9385F7B517C87B2843E216D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43C802D716652676E95A6EDF /* Pods-FMVotingApp.debug.xcconfig */,
+				97E163A87DC34C75E29435B9 /* Pods-FMVotingApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E41EBECFB41DD13325DBD609 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD17A90872418DC772D72483 /* Pods_FMVotingApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34A90F5C1D893116005EB687 /* Build configuration list for PBXNativeTarget "FMVotingApp" */;
 			buildPhases = (
+				AEFCDE41F392290C592E1735 /* [CP] Check Pods Manifest.lock */,
 				34A90F461D893115005EB687 /* Sources */,
 				34A90F471D893115005EB687 /* Frameworks */,
 				34A90F481D893115005EB687 /* Resources */,
+				062FCB66AA7BDECA75424361 /* [CP] Embed Pods Frameworks */,
+				DB6C4EB4ED5F8CEF7253CC15 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,12 +153,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				34A90F581D893115005EB687 /* LaunchScreen.storyboard in Resources */,
+				3466F7381D8935D600595E40 /* GoogleService-Info.plist in Resources */,
 				34A90F551D893115005EB687 /* Assets.xcassets in Resources */,
 				34A90F531D893115005EB687 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		062FCB66AA7BDECA75424361 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FMVotingApp/Pods-FMVotingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEFCDE41F392290C592E1735 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB6C4EB4ED5F8CEF7253CC15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FMVotingApp/Pods-FMVotingApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		34A90F461D893115005EB687 /* Sources */ = {
@@ -247,6 +326,7 @@
 		};
 		34A90F5D1D893116005EB687 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43C802D716652676E95A6EDF /* Pods-FMVotingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FMVotingApp/Info.plist;
@@ -258,6 +338,7 @@
 		};
 		34A90F5E1D893116005EB687 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E163A87DC34C75E29435B9 /* Pods-FMVotingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FMVotingApp/Info.plist;
@@ -286,6 +367,7 @@
 				34A90F5E1D893116005EB687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
